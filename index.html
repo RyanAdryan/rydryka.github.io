@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+
+    <title>SwalGabut</title>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta  http-equiv="X-UA-Compatible" content="ie=edge">
+
+    
+
+  </head>
+
+  <body style="text-align: center;">
+
+    <div class="div">
+
+    <h1>Ryan Lagi Gabut</h1>
+
+    <img width="200" height="200" src="https://c.tenor.com/gOVnou_T_1gAAAAC/%E0%B8%87%E0%B8%87-%E0%B8%81%E0%B8%AD%E0%B8%94.gif">
+
+    <br>
+
+    <br>
+
+    <button type="button" id="tombol" class="btn">Klik Aku</button>
+
+    </div>
+
+    
+
+    <style>
+
+      .btn {
+
+        background-color: #6495ED;
+
+        border: none;
+
+        color : white;
+
+        border-radius: 0.2em;
+
+        font-size: 24px;
+
+        padding: 16px 32px;
+
+      }
+
+        .div {
+
+          background-color: grey;
+
+          border: 2px solid black;
+
+          color: white;
+
+          border-radius: 0.2em;
+
+          padding: 16px 32px;
+
+        }
+
+    </style>
+
+    <script src="js/sweetalert2.all.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.17/dist/sweetalert2.all.min.js"></script>
+
+    <script>
+
+      
+
+    
+
+      const tombol = document.querySelector('#tombol');
+
+      tombol.addEventListener('click', function() {
+
+        Swal.fire({
+
+          title: 'Hi, Namaku Ryan',
+
+          text: 'Nama Kamu Siapa?',
+
+          icon: 'question',
+
+          input: 'text',
+
+          showDenyButton: true,
+
+          inputPlaceholder: 'Harus diisi',
+
+          focusConfirm: false
+
+          
+
+        }).then((result) => {
+
+          if (result.isDenied) {
+
+            Swal.fire({
+
+              text: 'Sombong Banget:(',
+
+              icon: 'warning',
+
+              title: 'ihh..'
+
+              })
+
+          } else if (result.value) {
+
+            Swal.fire({
+
+              title: 'Hallo, ' + result.value,
+
+              icon: 'succes',
+
+              html:
+
+              'Follow Ig ku dong, ' +
+
+              '<a href="https://www.instagram.com/rydryk.a">@rydryk.a</a>'
+
+            })
+
+          } else if (result.isDismissed) {
+
+            Swal.fire({
+
+              text: 'Sombong Banget:(',
+
+              icon: 'warning',
+
+              title: 'ihh..'
+
+            })
+
+            }
+
+          }
+
+          
+
+        )
+
+      });
+
+      
+
+    </script>
+
+  </body>
+
+</html>
