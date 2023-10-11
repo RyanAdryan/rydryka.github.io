@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name Card</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetalert2.min.js"></script>
+    <script src="sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="sweetalert2.min.css">
+</head>
+<body>
+    <div class="card">
+       <i id="toggle-sidebar" class="fa-solid fa-bars bars"></i>
+
+        <ul class="sidebar">
+            <li class="brnda" id="active"><a href="#" >Beranda</a></li>
+            <li><a href="ry.html">Portofolio</a></li>
+            <li><a href="#">Galeri</a></li>
+            <li><a href="#">Tentang</a></li>
+            <li><a href="#">Kontak</a></li>
+          </ul>
+
+        <img src="foto/profile1.jpg" />
+        <h1>Ryan Adryan</h1>
+        <div class="somed">
+        <a href="https://www.tiktok.com/@rydryka_1112">
+            <i class="fa-brands fa-tiktok "></i></a>
+        <a href="https://www.instagram.com/rydryka">
+            <i class="fa-brands fa-instagram "></i></a>
+        <a href="https://www.facebook.com/ryyyyennnn?mibextid=ZbWKwl">
+            <i class="fa-brands fa-facebook "></i></a>
+        </div>
+        <button class="followMe" type="button" id="tombol">Follow Me</button>
+        <div class="catatan">
+            <p>Saya adalah seorang pelajar di SMK jurusan TKJ<br />
+            saya sedang belajar coding html,css,js,c++<br />
+            jangan lupa follow akun sosial media saya</p>
+        </div>
+    </div>
+
+
+
+    <style>
+        body {
+            background-image: url("https://wallpaperaccess.com/full/349872.jpg");
+            background-size: auto;
+            background-repeat: repeat;
+            ` background-color: #333;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            font-family: 'Signika Negative', sans-serif;
+            
+        }
+        .card {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.322);
+            height: 400px;
+            width: 400px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 32px 2px rgba(0,0,0,0.59);
+            margin: auto;
+            margin-top: 100px;
+            position: relative;
+        }
+        .card img {
+            width: 100px;
+            border-radius: 50px;
+            margin-top: 30px;
+        }
+        .catatan {
+            background-color: white;
+            border-radius: 20px;
+            padding: 20px;
+            margin-botom: -70px;
+            
+        }
+        .followMe {
+            background-color: rgb(38, 90, 134);
+            margin-bottom: -50px;
+            padding: 15px;
+            border: none;
+            border-radius: 25px;
+            color: white;
+            width: 150px;
+            border: 2px solid transparent;
+        }
+        .followMe:hover {
+          background-color: rgba(38, 90, 134, 0.493);
+          border: 2px solid black;
+        }
+        .bars {
+            position: absolute;
+            font-size: 25px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 2px 5px;
+            transition: all 0.3s ease 0s;
+        }
+        .somed i {
+            margin: 8px;
+            font-size: 25px;
+            color: rgba(12, 13, 70, 1);
+        }
+        .somed i:active {
+            color: rgb(161, 21, 40);
+        }
+        .card h1 {
+            color: white;
+        }
+        .sidebar {
+            position: fixed;
+            visibility: hidden;
+            transition: visibility 0s, opacity 0.5s linear;
+            background-color: transparent
+            width: 100px;
+            height: 100%;
+            opacity: 0;
+            border-radius:20px;
+            top: 0;
+            margin: 0;
+            margin-bottom: 0;
+        }
+        .sidebar-open {
+            visibility: visible;
+            position: absolute;
+            right: 0;
+            opacity: 1;
+            top: 0;
+            transition: visibility 0s, opacity 0.5s linear;
+        }
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            margin: 20px;
+        }
+        .sidebar li {
+            text-align: center;
+            padding: 10px;
+            border: 2px solid transparent;
+            background-color: rgba(0, 0, 0, 0.24);
+        }
+        #active {
+            border-style: inset;
+            background-color: rgb(35, 29, 88);
+            border: 2px solid black;
+        }
+        .sidebar li:hover {
+          border-style: inset;
+          background-color: rgb(35, 29, 88);
+          border: 2px solid black;
+        }
+        ul {
+            list-style-type: none;
+        }
+        .bars:hover {
+            background-color: #000000;
+            box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+            color: #fff;
+            transform: translateY(-7px); 
+            padding: 2px 5px;
+            border-radius: 4px;
+        }
+        .brnda {
+          border-top-right-radius: 20px;
+        }
+    </style>
+
+    <script>
+        const toggleSidebar = document.querySelector("#toggle-sidebar");
+const sidebar = document.querySelector(".sidebar");
+
+toggleSidebar.addEventListener("click", () => {
+  sidebar.classList.toggle("sidebar-open");
+});
+
+
+        const tombol = document.querySelector('#tombol');
+        tombol.addEventListener('click', function() {
+
+            Swal.fire({
+                title: 'Follow Me',
+                text: 'dengan klik gambar social media dibawah',
+                showDenyButton: true,
+                denyButtonText: 'Kesan dan pesan'
+            }).then((result) => {
+                if (result.isDenied) {
+                    Swal.fire({
+                        title: 'Kesan & Pesan',
+                        icon: 'question',
+                        text: 'bagaimana kesan dan pesan anda',
+                        confirmButtonText: '<i class="fa fa-thumbs-up"></i> Baik',
+                        showDenyButton: true,
+                        denyButtonText: '<i class="fa fa-thumbs-down"> Buruk</i>'
+                    })
+                }
+            })
+        })
+    </script>
+</body>
+</html>
